@@ -28,9 +28,9 @@ Exploration of the data was done via train.py script
 - model was put in a flask webservice via the predict.py script, see file in github folder for project
   setup are pipenv Virtual Environment, by opening cli on your system and run
   
-'''
+,,,
   pip install pipenv
-'''
+,,,
 
   and then install the following:
   - Gunicorn
