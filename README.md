@@ -28,9 +28,9 @@ Exploration of the data was done via train.py script
 - model was put in a flask webservice via the predict.py script, see file in github folder for project
   setup are pipenv Virtual Environment, by opening cli on your system and run
   
-,,,
-  pip install pipenv
-,,,
+```
+pip install pipenv
+```
 
   and then install the following:
   - Gunicorn
@@ -38,16 +38,20 @@ Exploration of the data was done via train.py script
   - numpy
   - scikit-learn version "1.3.0"
   - requests
-  '''
+    
+```
   pipenv install gunicorn flask numpy scikit-learn="1.3.0" requests
-  ''' 
+``` 
 ### Deploy it locally with Docker
 You can run the project with Docker. To do so, you need to have Docker installed on your machine. Then, you need to build the image with the following command:
-'''
+
+```
 docker build -t midtermproj .
-'''
+```
+
 followed by this docker command
-'''
+
+```
 docker run -it --rm -p 9690:9690 midtermproj
-'''
+```
 
