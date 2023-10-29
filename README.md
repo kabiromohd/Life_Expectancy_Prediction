@@ -95,12 +95,15 @@ For cloud deployment [Render](render.com) was used.
 
 - Create a Render Account.
 - Docker repository was created to enable getting URL for the midtermproj image.
+  
   ![Docker Repository ScreenShot](https://github.com/kabiromohd/Midtermproject/assets/121871052/da00eda3-1bdd-43ef-9921-0d0ff1dd7d35)
 
-- copy the docker image URL on to render. 
+- copy the docker image URL on to render.
+  
 ![Render ScreenShot](https://github.com/kabiromohd/Midtermproject/assets/121871052/9766ac9a-d7e3-4929-b3df-b53e4e2d6d59)
 
 - deploy docker image to render cloud service
+  
 ![Render Deployment Screenshot](https://github.com/kabiromohd/Midtermproject/assets/121871052/1a77dce5-a7e8-404f-8443-a92d0d376907)
   
 ### To use the docker image deployed to cloud via render
