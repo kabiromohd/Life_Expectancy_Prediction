@@ -41,9 +41,25 @@ pip install pipenv
     
 ```
   pipenv install gunicorn flask numpy scikit-learn="1.3.0" requests
-``` 
+```
+copy the following files from the github repo to created virtual environment
+- predict.py
+- Dockerfile
+- pipfile.lock
+- pipfile
+- predict-test.py
+- predict-test_render.py
+- model_dv.pkl
+- model_rf_1.pkl
+  
 ### Deploy it locally with Docker
 You can run the project with Docker. To do so, you need to have Docker installed on your machine. Then, you need to build the image with the following command:
+
+```
+pipenv shell
+```
+
+Create docker image by running the following:
 
 ```
 docker build -t midtermproj .
@@ -55,3 +71,16 @@ followed by this docker command
 docker run -it --rm -p 9690:9690 midtermproj
 ```
 
+if all the above command run successfully open another cli and run below command:
+
+```
+pipenv shell
+```
+
+followed by which has already prepared data point to test the model:
+
+```
+python predict-test.py
+```
+
+This ends the local deployment to docker
