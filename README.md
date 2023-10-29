@@ -25,15 +25,15 @@ Exploration of the data was done via *train.py* script
   - trained best model using the random forest regressor after ascertaining it to produce the best model with obtained parameters via *train.py* script
   - Catergorical variables were encoded using the DictVectorizer
     
-### Put your model into a web service
-- model was put in a flask webservice via the *predict.py* script, see file in github folder for project
-  setup are pipenv Virtual Environment, by opening cli on your system and run
+### Model deployment to web services
+- Model Web services via flask via *predict.py* script, see file in github folder for project
+- Setup Pipenv Virtual Environment, by opening cli on your system and run
   
 ```
 pip install pipenv
 ```
 
-  and then install the following:
+- install the following:
   - Gunicorn
   - flask
   - numpy
@@ -41,17 +41,17 @@ pip install pipenv
   - requests
     
 ```
-  pipenv install gunicorn flask numpy scikit-learn="1.3.0" requests
+pipenv install gunicorn flask numpy scikit-learn="1.3.0" requests
 ```
-copy the following files from the github repo to created virtual environment
-- predict.py
-- Dockerfile
-- pipfile.lock
-- pipfile
-- predict-test.py
-- predict-test_render.py
-- model_dv.pkl
-- model_rf_1.pkl
+- Copy the following files from the github repo to created virtual environment
+  - predict.py
+  - Dockerfile
+  - pipfile.lock
+  - pipfile
+  - predict-test.py
+  - predict-test_render.py
+  - model_dv.pkl
+  - model_rf_1.pkl
   
 ### Deploy model locally with Docker
 You can run the project with Docker. To do so, you need to have Docker installed on your machine. Then, you need to build the image with the following command:
@@ -72,30 +72,31 @@ followed by this docker command which runs the docker image created
 docker run -it --rm -p 9690:9690 midtermproj
 ```
 
-if all the above command run successfully open another cli and run below command:
+if all the above command run successfully, open another cli and run below command to see prediction via local Docker deployment:
 
 ```
 pipenv shell
 ```
 
-followed by running below command, which has already prepared data point to test the model:
+Run below command. *predict-test.py* has already prepared data point to test the model:
 
 ```
 python predict-test.py
 ```
 
-This ends the local deployment to docker
+This ends the local deployment to docker.
 
 ### Deploy model to the cloud
 For cloud deployment [Render](render.com) was used.
-- Create a Render Account
-- Docker repository was created to enable getting URL for the midtermproj image
+
+- Create a Render Account.
+- Docker repository was created to enable getting URL for the midtermproj image.
 - copy the docker image URL on render.
   
 ![Render ScreenShot](https://github.com/kabiromohd/Midtermproject/assets/121871052/9766ac9a-d7e3-4929-b3df-b53e4e2d6d59)
 
-- to use the docker deployed to cloud via render
-- copy the render link and place in the predict.test_render.py script as "host"
+- To use the docker image deployed to cloud via render
+- copy the render deployment link and place in the predict.test_render.py script as "host"
 - run the following:
 
   ```
