@@ -92,4 +92,20 @@ For cloud deployment [Render](render.com) was used.
 - Docker repository was created to enable getting URL for the midtermproj image
 - copy the docker image URL on render.
   
-![render](https://github.com/kabiromohd/Midtermproject/assets/121871052/9766ac9a-d7e3-4929-b3df-b53e4e2d6d59)
+![Render ScreenShot](https://github.com/kabiromohd/Midtermproject/assets/121871052/9766ac9a-d7e3-4929-b3df-b53e4e2d6d59)
+
+- to use the docker deployed to cloud via render
+- copy the render link and place in the predict.test_render.py script as "host"
+- run the following:
+
+  ```
+  pipenv shell
+  ```
+
+  followed by:
+  
+  ```
+  python predict-test_render.py
+  ```
+
+  You see the prediction via the cloud
