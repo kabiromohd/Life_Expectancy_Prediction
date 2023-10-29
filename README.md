@@ -92,4 +92,4 @@ For cloud deployment [Render](render.com) was used.
 - Docker repository was created to enable getting URL for the midtermproj image
 - copy the docker image URL on render.
   
-![https://github.com/kabiromohd/Midtermproject/blob/main/render.jpeg)https://github.com/kabiromohd/Midtermproject/blob/main/render.jpeg]
+![Render Screenshot](https://github.com/kabiromohd/Midtermproject/blob/main/render.jpeg)https://github.com/kabiromohd/Midtermproject/blob/main/render.jpeg])
