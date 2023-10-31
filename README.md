@@ -24,12 +24,12 @@ Exploration of the data was done via *Life_expectancy_EDA.ipynb* jupyter noteboo
   - Checked for outliers
   - Checked for Duplicates
 - train data
-  - Catergorical variables were encoded using the DictVectorizer
-  - trained best model using the random forest regressor after ascertaining it to produce the best model with obtained parameters via *Train_model.py* script using the hyper parameter gotten while turning.
+  - Catergorical variables were encoded using the DictVectorizer library.
+  - trained best model using the random forest regressor after ascertaining it to produce the best model with hyper parameters via *Train_model.py* script.
     
 ### Model deployment to web services
-- Model Web services via flask via *predict.py* script, see file in github folder for project
-- Setup Pipenv Virtual Environment, by opening cli on your system and run
+- flask was used for web deployment via *predict.py* script.
+- Setup Pipenv Virtual Environment, by opening Cli on your system and run
   
 ```
 pip install pipenv
@@ -45,7 +45,7 @@ pip install pipenv
 ```
 pipenv install gunicorn flask numpy scikit-learn==1.3.0 requests
 ```
-- Copy the following files from the github repo to created virtual environment
+- Copy the following files from the github repo to created virtual environment folder
   - predict.py
   - Dockerfile
   - pipfile.lock
@@ -56,7 +56,9 @@ pipenv install gunicorn flask numpy scikit-learn==1.3.0 requests
   - model_rf_1.pkl
   
 ### Deploy model locally with Docker
-You can run the project with Docker. To do so, you need to have Docker installed on your machine, then you build the image with the following command:
+You can deploy the model on Docker.
+To do so, you need to have Docker installed on your machine, then you build the image with the following command:
+
 NOTE: Docker must be running before your run the following commands:
 
 ```
@@ -76,7 +78,7 @@ docker run -it --rm -p 9690:9690 midtermproj
 ```
 ![Docker Deployment Screenshot](https://github.com/kabiromohd/Midtermproject/assets/121871052/05d1babe-0150-4ec3-b082-be8ee14a9b7a)
 
-if all the above command run successfully, open another cli and run below command to see prediction via local Docker deployment:
+if all the above command run successfully, open another Cli and run below command to see prediction via local Docker deployment:
 
 ```
 pipenv shell
@@ -98,7 +100,9 @@ For cloud deployment [Render](render.com) was used.
   
 ![Docker Repository ScreenShot](https://github.com/kabiromohd/Midtermproject/assets/121871052/da00eda3-1bdd-43ef-9921-0d0ff1dd7d35)
 
+
 - copy the docker image URL on to render.
+
   
 ![Render ScreenShot](https://github.com/kabiromohd/Midtermproject/assets/121871052/9766ac9a-d7e3-4929-b3df-b53e4e2d6d59)
 
@@ -107,7 +111,10 @@ For cloud deployment [Render](render.com) was used.
 ![Render Deployment Screenshot](https://github.com/kabiromohd/Midtermproject/assets/121871052/1a77dce5-a7e8-404f-8443-a92d0d376907)
   
 ### To interact with the docker image deployed to cloud via render
-- copy the render deployment link and place in the *predict.test_render.py* script as "host"
+- copy the render deployment link and place in the *predict-test_render.py* script as "host"
+
+*predict-test_render.py script has already prepared data point to be used to test the model deployed to cloud.
+
 - run the following: 
 
   ```
@@ -120,4 +127,4 @@ For cloud deployment [Render](render.com) was used.
   python predict-test_render.py
   ```
 
-  You see the prediction via the cloud service 
+  You see the prediction via the cloud service.
