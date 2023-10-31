@@ -113,7 +113,7 @@ For cloud deployment [Render](render.com) was used.
 ### To interact with the docker image deployed to cloud via render
 - copy the render deployment link and place in the *predict-test_render.py* script as "host"
 
-*predict-test_render.py script has already prepared data point to be used to test the model deployed to cloud.
+- *predict-test_render.py script has already prepared data point to be used to test the model deployed to cloud.
 
 - run the following: 
 
