@@ -1,4 +1,4 @@
-# Mid-Term Project
+# LIFE EXPECTANCY PREDICTION
 ## DatatalksClub ML Zoomcamp Mid term project
 ## Objectives of Midterm Project:
 - Find a dataset
