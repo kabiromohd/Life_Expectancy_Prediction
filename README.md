@@ -52,14 +52,15 @@ pip install pipenv
 ```
 pipenv install gunicorn flask numpy scikit-learn==1.3.0 requests
 ```
-- Copy the following files from the github repo to created virtual environment folder.
+- Get copies of the project and dependencies, you can clone the repo.
+- The files should be placed in the virtual environment folder after being cloned via below command.
 
 ```
-git clone 
+git clone https://github.com/kabiromohd/Life_Expectancy_Prediction.git
 ```
 
 ### Deploy model locally with Docker
-You can deploy the model on Docker.
+You can deploy the model on Docker locally by following these steps.
 To do so, you need to have Docker installed on your machine, then you build the image with the following command:
 
 NOTE: Docker must be running before your run the following commands:
@@ -87,7 +88,9 @@ if all the above command run successfully, open another Cli and run below comman
 pipenv shell
 ```
 
-Run below command. *predict-test.py* has already prepared data point to test the model:
+Note: *predict-test.py* has already prepared with data point to test the model deployed locally on docker
+
+Run below command. 
 
 ```
 python predict-test.py
@@ -98,27 +101,41 @@ This ends the local deployment to docker.
 ### Deploy docker image to the cloud
 For cloud deployment [Render](render.com) was used.
 
-- Create a Render Account.
+- Create a Docker Account 
+- Creating an account on Docker enables setting up of Docker repository which can be used to push the docker image created locally.
+- Docker repo created for the purpose of this project is *"kabiromohd/data_science"*
 - Docker repository was created to enable getting URL for the midtermproj image.
-  
+ 
 ![Docker Repository ScreenShot](https://github.com/kabiromohd/Midtermproject/assets/121871052/da00eda3-1bdd-43ef-9921-0d0ff1dd7d35)
 
+To deploy the docker image to cloud, open a Cli and run the following commands:
 
-- copy the docker image URL on to render.
+```
+pipenv shell
+```
 
+```
+docker build -t kabiromohd/data_science:midtermproj .
+```
+
+Push the docker image created above to the repo created with the following command:
+
+```
+docker push kabiromohd/data_science:midtermproj
+```
+
+- copy the docker image URL on to render from the docker repo
   
 ![Render ScreenShot](https://github.com/kabiromohd/Midtermproject/assets/121871052/9766ac9a-d7e3-4929-b3df-b53e4e2d6d59)
 
-- deploy docker image to render cloud service
+- deploy docker image to render cloud service.
   
 ![Render Deployment Screenshot](https://github.com/kabiromohd/Midtermproject/assets/121871052/1a77dce5-a7e8-404f-8443-a92d0d376907)
   
 ### To interact with the docker image deployed to cloud via render
-- copy the render deployment link and place in the *predict-test_render.py* script as "host"
-
-- *predict-test_render.py script has already prepared data point to be used to test the model deployed to cloud.
-
-- run the following: 
+- copy the render deployment link and place in the *predict-test_render.py* script as "host" and has already prepared data point to be used to test the model deployed to cloud.
+- for this project, the deployment link has already been provided script. it can be run following the below:
+- open a Cli and run the following: 
 
   ```
   pipenv shell
