@@ -10,8 +10,15 @@
 - Deploy to the cloud
   
 ### Find a Dataset
-The Global Health Observatory (GHO) data repository under World Health Organization (WHO) keeps track of the health status as well as many other related factors for all countries. The datasets are made available to public for the purpose of health data analysis. The dataset related to life expectancy, health factors for 193 countries has been collected from the same WHO data repository website and its corresponding economic data was collected from United Nation website. Among all categories of health-related factors only those critical factors were chosen which are more representative.
-Dataset [Link](https://www.kaggle.com/competitions/oht-ibadan-bootcamp-capstone-open-house/data)
+The Global Health Observatory (GHO) data repository under World Health Organization (WHO) keeps track of the health status as well as many other related factors for all countries. 
+
+The datasets are made available to public for the purpose of health data analysis. The dataset is related to life expectancy, health factors for 193 countries has been collected from the same WHO data repository website and its corresponding economic data was collected from United Nation website. 
+
+Among all categories of health-related factors only those critical factors were chosen which are more representative.
+
+ [Dataset Link](https://www.kaggle.com/competitions/oht-ibadan-bootcamp-capstone-open-house/data)
+
+The aim of this project is to build a model that can predict life expectancy given certain criteria.
 
 ### Explore and prepare the data
 Exploration of the data was done via *Life_expectancy_EDA.ipynb* jupyter notebook file
@@ -45,16 +52,12 @@ pip install pipenv
 ```
 pipenv install gunicorn flask numpy scikit-learn==1.3.0 requests
 ```
-- Copy the following files from the github repo to created virtual environment folder
-  - predict.py
-  - Dockerfile
-  - pipfile.lock
-  - pipfile
-  - predict-test.py
-  - predict-test_render.py
-  - model_dv.pkl
-  - model_rf_1.pkl
-  
+- Copy the following files from the github repo to created virtual environment folder.
+
+```
+git clone 
+```
+
 ### Deploy model locally with Docker
 You can deploy the model on Docker.
 To do so, you need to have Docker installed on your machine, then you build the image with the following command:
