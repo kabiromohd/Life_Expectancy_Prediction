@@ -63,7 +63,7 @@ git clone https://github.com/kabiromohd/Life_Expectancy_Prediction.git
 You can deploy the model on Docker locally by following these steps.
 To do so, you need to have Docker installed on your machine, then you build the image with the following command:
 
-NOTE: Docker must be running before your run the following commands:
+NOTE: Docker must be running before your run the following commands on Cli:
 
 ```
 pipenv shell
@@ -103,6 +103,7 @@ For cloud deployment [Render](render.com) was used.
 
 - Create a Docker Account 
 - Creating an account on Docker enables setting up of Docker repository which can be used to push the docker image created locally.
+- The docker repo is create on the docker web login
 - Docker repo created for the purpose of this project is *"kabiromohd/data_science"*
 - Docker repository was created to enable getting URL for the midtermproj image.
  
