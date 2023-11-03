@@ -134,8 +134,10 @@ docker push kabiromohd/data_science:midtermproj
 ![Render Deployment Screenshot](https://github.com/kabiromohd/Midtermproject/assets/121871052/1a77dce5-a7e8-404f-8443-a92d0d376907)
   
 ### To interact with the docker image deployed to cloud via render
-- copy the render deployment link and place in the *predict-test_render.py* script as "host" and has already prepared data point to be used to test the model deployed to cloud.
-- for this project, the deployment link has already been provided script. it can be run following the below:
+- copy the render deployment link and place in the *predict-test_render.py* script as "host".
+- *predict-test_render.py* has already prepared data point to be used to test the model deployed to cloud.
+- for this project, the deployment link has already been provided in the .py script. It can be executed as illustrated below:
+  
 - open a Cli and run the following: 
 
   ```
@@ -148,4 +150,4 @@ docker push kabiromohd/data_science:midtermproj
   python predict-test_render.py
   ```
 
-  You see the prediction via the cloud service.
+You see the prediction via the cloud service.
