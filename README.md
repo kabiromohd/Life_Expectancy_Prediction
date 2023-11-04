@@ -151,3 +151,9 @@ docker push kabiromohd/data_science:midtermproj
   ```
 
 You see the prediction via the cloud service.
+See illustration video below
+
+https://github.com/kabiromohd/Life_Expectancy_Prediction/assets/121871052/eaae542b-a5e4-404f-8a19-9d9a4c787539
+
+
+
